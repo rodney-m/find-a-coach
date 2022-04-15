@@ -1,3 +1,4 @@
+import axios from "axios"
 export default {
     registerCoach(context,  data){
         const coachData = {
@@ -9,6 +10,8 @@ export default {
             areas : data.areas
         }
 
+        axios.get('https://find-a-coach-b2e1f-default-rtdb.firebaseio.com/')
+ 
         context.commit('registerCoach', coachData)
     }
 }
